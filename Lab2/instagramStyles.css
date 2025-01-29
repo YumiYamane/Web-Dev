@@ -1,0 +1,238 @@
+body {
+    font-family: sans-serif;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+a {
+    text-decoration: none;
+}
+
+.image {
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    height: 75%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 14px;
+}
+
+.box {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    flex-grow: 1;
+}
+
+#card1 {
+    position: absolute;
+    top: 10%;
+    right: 25%;
+}
+
+#card2 {
+    position: absolute;
+    bottom: 40%;
+    right: 25%;
+}
+
+#text {
+    position: absolute;
+    right: 35%;
+    bottom: 35%;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 27%;
+    bottom: 29%;
+}
+
+.button {
+    height: 44px;
+    cursor: pointer;
+}
+
+.heading {
+    margin: 22px auto 12px;
+}
+
+.field {
+    margin: 10px 0;
+    position: relative;
+    font-size: 14px;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+input {
+    padding: 9px 0px 7px 9px;
+    font-size: 12px;
+    width: 16rem;
+    height: 1.2rem;
+    outline: none;
+    background: #fafafa;
+    border-radius: 3px;
+    border: 1px solid #efefef;
+}
+
+input:focus {
+    border-color: #333;
+}
+
+label {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    padding-bottom: 15px;
+    transform: translateY(10px);
+    line-height: 6px;
+    transition: all ease-out 0.1s;
+    font-size: 14px;
+    color: #999;
+    padding-top: 6px;
+}
+
+input::placeholder {
+    visibility: hidden;
+}
+
+.login-form ::-moz-placeholder {
+    color: transparent;
+}
+
+input:not(:placeholder-shown) + label {
+    transform: translateY(0);
+    font-size: 11px;
+}
+
+input:not(:placeholder-shown) {
+    padding-top: 14px;
+    padding-bottom: 2px;
+}
+
+.login-button {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    background-color: rgb(118, 196, 245);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.separator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+    margin-top: 6px;
+}
+
+.separator .line {
+    height: 1px;
+    width: 40%;
+    background-color: #dbdbdb;
+}
+
+.other {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fb-login-btn {
+    margin: 1rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #385185;
+    font-weight: 600;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.fb-icon {
+    color: #385185;
+    font-size: 1rem;
+    padding-right: 1px;
+}
+
+.forgot-password {
+    font-size: 11px;
+    color: #003569;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.signup {
+    color: #3897f0;
+    font-weight: 600;
+}
+
+footer {
+    margin-top: auto; 
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+footer .footer-contents ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-contents li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .footer-contents a {
+    text-decoration: none;
+    color: #8e8e8e;
+}
+
+footer .footer-contents a:hover {
+    text-decoration: underline;
+}
+
+footer small {
+    display: block;
+    margin-top: 15px;
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+footer small a {
+    margin-right: 15px;
+}
