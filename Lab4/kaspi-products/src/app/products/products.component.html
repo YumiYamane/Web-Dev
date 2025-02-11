@@ -1,0 +1,34 @@
+<div class="products-container">
+  <div class="product" *ngFor="let product of products">
+
+    <div class="product-image">
+      <div *ngIf="product.gallery && product.gallery.length > 0; else singleImage">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img [src]="product.gallery[0]" class="d-block w-100" alt="...">
+            </div>
+            <div *ngFor="let img of product.gallery.slice(1); let i = index" class="carousel-item">
+              <img [src]="img" class="d-block w-100" alt="{{ product.name }} - image {{ i + 1 }}">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <ng-template #singleImage>
+        <img [src]="product.image" alt="{{ product.name }}" class="d-block w-100">
+      </ng-template>
+    </div>
+
+    <div class="product-details">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p>Rating: {{ product.rating }} / 5</p>
+      <a [href]="product.link" target="_blank">Link to the product</a>
+    </div>
+    <div class="product-links">
+      <button id="whatsapp" (click)="shareProduct(product.link, 'whatsapp')">Share on WhatsApp</button>
+      <button id="telegram" (click)="shareProduct(product.link, 'telegram')">Share on Telegram</button>
+    </div>
+  </div>
+</div>  
