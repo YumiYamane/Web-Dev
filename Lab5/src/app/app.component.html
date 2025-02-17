@@ -1,0 +1,15 @@
+<div class="header">
+  <img src="https://s3-symbol-logo.tradingview.com/jsc-kaspikz-gdr-reg-s--600.png" alt="kaspi" width="150">
+  <h1>Kaspi Products</h1>
+</div>
+
+<div class="categories">
+  <button *ngFor="let category of categories" (click)="onCategorySelect(category.name)">
+    {{ category.name }}
+  </button>
+</div>
+
+<div *ngIf="selectedCategory">
+  <h2>Products in '{{ selectedCategory }}' category</h2>
+  <app-product-list [products]="getFilteredProducts()"></app-product-list>
+</div>
