@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+button {
+    background-color: rgb(90, 128, 48);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 8px 20px;
+    font-size: 15px;
+}
+
+button:hover {
+    transform: scale(1.1)
+}
+
+button svg {
+    margin-bottom: -2px;
+}

@@ -1,0 +1,17 @@
+<h2>Photos of Album {{ albumId }}</h2>
+
+<button (click)="goBack()">Return</button>
+<a routerLink="/home">Go to Home</a>
+
+<div *ngIf="photos.length > 0; else noPhotos">
+  <div *ngFor="let photo of photos">
+    <div class="photo-card">
+      <img [src]="photo.url" [alt]="photo.title" class="photo-thumbnail"/>
+      <p>{{ photo.title }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #noPhotos>
+  <p>No photos available for this album.</p>
+</ng-template>

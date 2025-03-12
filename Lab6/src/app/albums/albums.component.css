@@ -1,0 +1,30 @@
+.album-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+
+.album-card {
+  background-color: beige;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.album-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.album-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.delete-button {
+  background-color: rgb(226, 75, 75);
+  padding: 8px 15px;
+}

@@ -1,0 +1,26 @@
+<div *ngIf="album">
+  <h2>Album Details</h2>
+  <div>
+    <label for="title">Title:</label>
+    <input 
+      id="title" 
+      type="text" 
+      [value]="album.title"  
+      (input)="onTitleChange($event)"  
+      placeholder="Edit album title"
+    />
+  </div>
+  <p>Album ID: {{ album.id }}</p>
+  <p>User ID: {{ album.userId }}</p>
+  <p>Details about the album...</p>
+
+  <div class="actions-container">
+    <a [routerLink]="['/albums', album.id, 'photos']">Photos</a>
+
+    <button (click)="saveAlbum()">Save</button>
+    <button (click)="goBack()">Return</button>
+
+    <a routerLink="/home">Go to Home</a>
+  </div>
+
+</div>
