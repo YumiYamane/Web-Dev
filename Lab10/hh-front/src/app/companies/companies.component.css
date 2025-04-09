@@ -1,0 +1,40 @@
+body {
+    background-image: linear-gradient(rgba(157, 230, 243, 0.5), rgba(144, 161, 236, 0.548)),
+    url('https://i0.wp.com/architecturemagazine.co.uk/wp-content/uploads/2018/09/LastWord_PostModernism_Image1.jpg?w=2088&ssl=1');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+.company-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; 
+  	gap: 20px;
+	margin: 20vh 0;
+}
+
+.company-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    padding: 10px;
+    width: 250px;
+    height: 400px;
+}
+
+.company-card h3 {
+    margin-bottom: 30px; 
+}
+
+.company-card:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,20 @@
+<h1 *ngIf="company">Vacancies for the company "{{ company.name }}"</h1>
+
+<div class="vacancy-list" *ngIf="vacancies && vacancies.length > 0; else noVacancies">
+  <div class="vacancy-item" *ngFor="let vacancy of vacancies">
+    <h3>{{ vacancy.name }}</h3>
+    <p><strong>Description:</strong> {{ vacancy.description }}</p>
+    <p><strong>Salary:</strong> ${{ vacancy.salary }}</p>
+    <div class="company-details">
+        <p><strong>Company Name:</strong> {{ vacancy.company.name }}</p>
+        <p><strong>Company City:</strong> {{ vacancy.company.city }}</p>
+        <p><strong>Company Address:</strong> {{ vacancy.company.address }}</p>
+    </div>
+    
+    <hr *ngIf="vacancy !== vacancies[vacancies.length - 1]">
+  </div>
+</div>
+
+<ng-template #noVacancies>
+  <p>No vacancies found for this company.</p>
+</ng-template>

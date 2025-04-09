@@ -1,0 +1,17 @@
+<body>
+
+    <h1>Major IT companies</h1>
+
+    <div class="company-cards" *ngIf="companyList && companyList.length > 0; else noCompanies">
+        <div class="company-card" *ngFor="let company of companyList" (click)="goToVacanciesPage(company.id)">
+            <h3>{{ company.name }}</h3>
+            <p><strong>Description:</strong> {{ company.description }}</p>
+            <p><strong>City:</strong> {{ company.city }}</p>
+            <p><strong>Address:</strong> {{ company.address }}</p>
+        </div>
+    </div>
+    <ng-template #noCompanies>
+        <p>No companies found.</p>
+    </ng-template>
+
+</body>
